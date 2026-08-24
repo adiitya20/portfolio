@@ -48,7 +48,7 @@ export function ProjectCard({ project, active }: Props) {
               </li>
             ))}
           </ul>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4 items-center">
             <MagneticButton
               cursor="view"
               className="display text-sm tracking-[0.16em] uppercase"
@@ -56,6 +56,16 @@ export function ProjectCard({ project, active }: Props) {
             >
               Explore project
             </MagneticButton>
+            {"liveDemoUrl" in project && project.liveDemoUrl ? (
+              <a
+                href={project.liveDemoUrl as string}
+                target="_blank"
+                rel="noreferrer"
+                className="display text-xs tracking-[0.16em] uppercase px-4 py-2.5 border border-[var(--accent)] bg-[var(--accent-soft)]/50 text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-colors rounded font-semibold inline-flex items-center gap-1.5 shadow-sm"
+              >
+                🚀 Live Demo ↗
+              </a>
+            ) : null}
           </div>
         </div>
         <div

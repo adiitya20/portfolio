@@ -256,6 +256,7 @@ export const portfolioData = {
       title: "GrillHouse / Zomspy",
       shortTitle: "GrillHouse / Zomspy",
       number: "02",
+      liveDemoUrl: "https://grillhouse-yv5t.onrender.com",
       category: "Full-Stack Web Application / Restaurant Platform / DBMS",
       description:
         "A full-stack restaurant platform designed for restaurant discovery, menu browsing, cart management, orders, reservations, authentication and database-driven restaurant management.",
@@ -458,7 +459,7 @@ export const portfolioData = {
 
   leadership: [
     {
-      event: "Techyon 2025",
+      event: "MindSpark 2025",
       organization: "Padre Conceição College of Engineering",
       type: "Technical Fest",
       role: "Finance Head",

@@ -26,7 +26,7 @@ A modern, interactive developer portfolio showcasing software development, AI/ML
 | Project | Category | Key Technologies |
 | :--- | :--- | :--- |
 | **01. Deepfake & AI Real Recognizer** | AI / ML / Computer Vision | Python, TensorFlow, OpenCV, Librosa, CNN, LSTM, MTCNN, FastAPI |
-| **02. Grill House — Restaurant Application** | Full-Stack Web App / DBMS | Node.js, Express.js, MySQL, HTML5, CSS3, JavaScript, Tailwind CSS |
+| **02. Grill House — Restaurant Application** | Full-Stack Web App / DBMS | Node.js, Express.js, MySQL, HTML5, CSS3, JavaScript, Tailwind CSS ([Live Demo ↗](https://grillhouse-yv5t.onrender.com)) |
 | **03. Mood Detector + Music Suggestor** | AI / CV / Recommendation | Computer Vision, OpenCV, Emotion Detection, Python |
 
 ---
@@ -49,7 +49,7 @@ A modern, interactive developer portfolio showcasing software development, AI/ML
 
 - 🏢 **Data Analytics Intern** — Lenovo Leap Internship
 - 🏛️ **Vice President (2025–2026)** — Student Unit of Information Technology (SUIT), PCCE
-- 💰 **Financial Head** — Techyon – Mindspark 2025 Flagship Technical Fest, PCCE
+- 💰 **Financial Head** — MindSpark 2025 Flagship Technical Fest, PCCE
 
 ---
 
