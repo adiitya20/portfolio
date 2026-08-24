@@ -25,33 +25,33 @@ export function ProjectCard({ project, active }: Props) {
   }, []);
 
   return (
-    <article className="project-slide relative flex h-full min-h-[100svh] w-screen shrink-0 flex-col justify-center px-[var(--pad)] py-24">
-      <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+    <article className="project-slide relative flex h-full min-h-[100svh] max-h-[100svh] w-screen shrink-0 flex-col justify-center px-[var(--pad)] py-12 md:py-16 overflow-hidden">
+      <div className="grid items-center gap-6 lg:gap-10 lg:grid-cols-[0.95fr_1.05fr] my-auto">
         <div>
-          <p className="mono text-[11px] tracking-[0.2em] uppercase text-[var(--ink-soft)]">
+          <p className="mono text-[10px] tracking-[0.2em] uppercase text-[var(--ink-soft)]">
             {project.number}
           </p>
-          <h3 className="display mt-3 max-w-xl text-[clamp(2.2rem,5vw,4.6rem)] leading-[0.9] tracking-[-0.05em]">
+          <h3 className="display mt-2 max-w-xl text-[clamp(1.8rem,3.6vw,3.5rem)] leading-[0.95] tracking-[-0.05em]">
             {project.title}
           </h3>
-          <p className="mono mt-4 text-[10px] tracking-[0.16em] uppercase text-[var(--accent)]">
+          <p className="mono mt-2 text-[10px] tracking-[0.16em] uppercase text-[var(--accent)] font-semibold">
             {project.category}
           </p>
-          <p className="mt-6 max-w-md text-[var(--ink-soft)]">{project.description}</p>
-          <ul className="mt-6 flex flex-wrap gap-2">
+          <p className="mt-3.5 max-w-md text-[13px] md:text-sm text-[var(--ink-soft)] leading-relaxed">{project.description}</p>
+          <ul className="mt-4 flex flex-wrap gap-1.5">
             {project.technologies.slice(0, 6).map((tech) => (
               <li
                 key={tech}
-                className="mono border border-[var(--line)] px-2 py-1 text-[10px] tracking-[0.12em] uppercase"
+                className="mono border border-[var(--line)] px-2 py-0.5 text-[9px] tracking-[0.12em] uppercase rounded-xs"
               >
                 {tech}
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-wrap gap-4 items-center">
+          <div className="mt-6 flex flex-wrap gap-3 items-center">
             <MagneticButton
               cursor="view"
-              className="display text-sm tracking-[0.16em] uppercase"
+              className="display text-xs md:text-sm tracking-[0.16em] uppercase px-4 py-2"
               onClick={() => openProject(project)}
             >
               Explore project
@@ -61,7 +61,7 @@ export function ProjectCard({ project, active }: Props) {
                 href={project.liveDemoUrl as string}
                 target="_blank"
                 rel="noreferrer"
-                className="display text-xs tracking-[0.16em] uppercase px-4 py-2.5 border border-[var(--accent)] bg-[var(--accent-soft)]/50 text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-colors rounded font-semibold inline-flex items-center gap-1.5 shadow-sm"
+                className="display text-xs tracking-[0.14em] uppercase px-3.5 py-2 border border-[var(--accent)] bg-[var(--accent-soft)]/50 text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-colors rounded font-semibold inline-flex items-center gap-1.5 shadow-sm"
               >
                 🚀 Live Demo ↗
               </a>
@@ -70,14 +70,14 @@ export function ProjectCard({ project, active }: Props) {
         </div>
         <div
           ref={visual}
-          className="project-visual origin-center will-change-transform"
+          className="project-visual origin-center will-change-transform scale-95 md:scale-100"
           onMouseEnter={() => setCursorMode("view")}
           onMouseLeave={() => setCursorMode("default")}
         >
           {project.id === 1 && <DeepfakeVisual active={active} />}
           {project.id === 2 && <GrillHouseVisual active={active} />}
           {project.id === 3 && <MoodDetectorVisualization active={active} />}
-          <div className="mt-6">
+          <div className="mt-4">
             <ArchitectureDiagram project={project} active={active} />
           </div>
         </div>
