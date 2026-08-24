@@ -1,27 +1,23 @@
-# ⚡ Aditya Verlekar — Software & AI Engineer Portfolio
+# ⚡ Aditya Rajendra Verlekar — Software & AI Engineer Portfolio
 
-A modern, interactive developer portfolio showcasing software development, AI/ML engineering, computer vision projects, and full-stack web applications. Built with **Next.js 16**, **React 19**, **Tailwind CSS v4**, **GSAP**, **Three.js / React Three Fiber**, and **Lenis Smooth Scroll**.
+A modern, interactive developer portfolio showcasing software development, AI/ML engineering, computer vision systems, data analytics, and full-stack web applications.
 
-![Next.js 16](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs)
-![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-Animation-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-R3F-black?style=for-the-badge&logo=three.js&logoColor=white)
+🌐 **Live Website**: [https://aditya-verlekar-portfolio.vercel.app](https://aditya-verlekar-portfolio.vercel.app)  
+📄 **Résumé**: [Official Cloudinary Link](https://collection.cloudinary.com/cvjk7byd/e71f8b07e70cf37a6c9609c0e268d11f)
 
 ---
 
-## ✨ Features & Highlights
+## 👤 Developer Profile
 
-- 🎨 **Generative 3D Canvas Background**: Custom GLSL shader with wave distortion and reactive mouse light aura built with React Three Fiber.
-- 🎛️ **Interactive Live Simulators**:
-  - **Deepfake AI Detector**: Interactive frame scanner, MTCNN face bounding box, confidence scores, and acoustic wave spectrum visualizer.
-  - **GrillHouse Platform**: Interactive multi-tab card switcher displaying REST API status logs, MySQL schema relationships, and UI order flows.
-  - **Mood Detector**: Real-time facial landmark SVG mesh wireframe, emotion probability meters, and animated sound equalizer bars.
-- 🪪 **3D Tilt Developer Badge**: Interactive card tracking mouse movement with live availability indicator dot.
-- 📜 **Horizontal Scroll Showcase**: Smooth GSAP ScrollTrigger horizontal pinning for deep project inspection.
-- 🎯 **Interactive Vocabulary Graph**: Interactive technical skills matrix displaying system connections on hover.
-- 🌊 **Smooth Kinetic Typography**: Split-character line reveals, velocity effects, and customized smooth scrolling powered by Lenis.
+- **Name**: Aditya Rajendra Verlekar
+- **Role**: Software Developer · Full-Stack & AI/ML Engineer
+- **Education**: B.E. Information Technology (Padre Conceição College of Engineering, Goa)
+- **Current CGPA**: `8.7 / 10`
+- **Location**: Goa, India
+- **Phone**: `+91 7558696546`
+- **Email**: `adityaverlekarr@gmail.com`
+- **GitHub**: [@adiitya20](https://github.com/adiitya20)
+- **LinkedIn**: [in/aditya-verlekar](https://linkedin.com/in/aditya-verlekar)
 
 ---
 
@@ -29,90 +25,37 @@ A modern, interactive developer portfolio showcasing software development, AI/ML
 
 | Project | Category | Key Technologies |
 | :--- | :--- | :--- |
-| **01. Deepfake & AI Real Recognizer** | AI / ML / Computer Vision | Python, TensorFlow, OpenCV, Librosa, CNN, LSTM, MTCNN |
-| **02. GrillHouse / Zomspy** | Full-Stack Web App / DBMS | Node.js, Express.js, MySQL, HTML5, CSS3, JavaScript, Tailwind |
-| **03. Mood Detector + Music Suggestor** | AI / CV / Music Recs | Computer Vision, OpenCV, Machine Learning, Python |
+| **01. Deepfake & AI Real Recognizer** | AI / ML / Computer Vision | Python, TensorFlow, OpenCV, Librosa, CNN, LSTM, MTCNN, FastAPI |
+| **02. Grill House — Restaurant Application** | Full-Stack Web App / DBMS | Node.js, Express.js, MySQL, HTML5, CSS3, JavaScript, Tailwind CSS |
+| **03. Mood Detector + Music Suggestor** | AI / CV / Recommendation | Computer Vision, OpenCV, Emotion Detection, Python |
 
 ---
 
-## 💻 Tech Stack
+## 💻 Technical Vocabulary & Skills
 
-### **Frontend & Framework**
-- **Framework**: Next.js 16 (App Router + Turbopack)
-- **UI Library**: React 19
-- **Styling**: Tailwind CSS v4, Space Grotesk & JetBrains Mono fonts
-- **Icons & Motion**: GSAP (ScrollTrigger), Lenis Smooth Scroll, Custom Cursor Manager
-
-### **3D & Graphics**
-- Three.js
-- `@react-three/fiber`
-- Custom GLSL Shaders
-
----
-
-## 🚀 Getting Started
-
-### **Prerequisites**
-- **Node.js**: `v18.0.0` or higher
-- **npm** or **yarn** / **pnpm**
-
-### **Installation**
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/adiitya20/portfolio.git
-   cd portfolio
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+- **💻 Programming Languages**: C, C++, Java, Python, JavaScript, SQL
+- **🌐 Frontend**: HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Jetpack Compose
+- **⚙️ Backend**: Node.js, Express.js, FastAPI, REST APIs
+- **🗄️ Databases**: MySQL, PostgreSQL, MongoDB, SQLite, Oracle, Firebase
+- **🤖 AI / ML**: Machine Learning, Deep Learning, CNN, RNN, LSTM, Computer Vision, NLP fundamentals, Gemini APIs, OpenCV, TensorFlow, Librosa, Hugging Face
+- **📊 Data & Analytics**: Pandas, NumPy, Matplotlib, Excel, Tableau, Data Analysis, Data Visualization
+- **🔐 Auth & APIs**: Firebase Authentication, JWT, REST APIs, JSON
+- **🛠️ Tools & IDEs**: Git, GitHub, VS Code, Android Studio, MySQL Workbench, Google Colab, Jupyter, Cursor, Claude
+- **🚀 Deployment & Infra**: Docker, Railway, Cloud Deployment
 
 ---
 
-## 📦 Project Structure
+## 💼 Leadership & Internship Experience
 
-```
-portfolio/
-├── src/
-│   ├── app/                  # Next.js App Router routes & layout configuration
-│   ├── components/           # UI components
-│   │   ├── projects/         # Interactive project card visualizers & diagrams
-│   │   ├── skills/           # Technical skills category pills & graph interaction
-│   │   ├── About.tsx         # Interactive 3D tilt profile identity card
-│   │   ├── Hero.tsx          # Hero section with kinetic typography
-│   │   ├── HeroBackground.tsx # R3F GLSL interactive background canvas
-│   │   ├── EducationTimeline.tsx # Timeline with coursework highlights
-│   │   └── Leadership.tsx    # Technical fest finance head event card
-│   ├── context/              # Global state & cursor mode context
-│   ├── data/                 # Portfolio configuration & metadata source of truth
-│   └── lib/                  # Motion helpers, Lenis hook, classname utilities
-├── public/                   # Static assets & media
-├── package.json              # Project dependencies & scripts
-└── README.md                 # Project documentation
-```
+- 🏢 **Data Analytics Intern** — Lenovo Leap Internship
+- 🏛️ **Vice President (2025–2026)** — Student Unit of Information Technology (SUIT), PCCE
+- 💰 **Financial Head** — Techyon – Mindspark 2025 Flagship Technical Fest, PCCE
 
 ---
 
-## 👤 Author
+## 📬 Contact & Inquiries
 
-**Aditya Verlekar**
-- 🎓 **Degree**: B.E. Information Technology (PCCE, Goa)
-- 📍 **Location**: Goa, India
-- 🔗 **GitHub**: [@adiitya20](https://github.com/adiitya20)
-- 💼 **LinkedIn**: [Aditya Verlekar](https://www.linkedin.com/in/aditya-verlekar-81990b287/)
-- 📷 **Instagram**: [@adityaverlekar_](https://www.instagram.com/adityaverlekar_/)
+- 📞 **Phone**: [+91 7558696546](tel:+917558696546)
+- ✉️ **Email**: [adityaverlekarr@gmail.com](mailto:adityaverlekarr@gmail.com)
+- 🌐 **Portfolio**: [aditya-verlekar-portfolio.vercel.app](https://aditya-verlekar-portfolio.vercel.app)
 
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
