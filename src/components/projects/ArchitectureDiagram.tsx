@@ -54,24 +54,39 @@ export function ArchitectureDiagram({ project, active = true }: Props) {
           </button>
         ))}
       </div>
-      <svg className="pointer-events-none mt-3 h-8 w-full" aria-hidden>
+      <svg className="pointer-events-none mt-3 h-10 w-full overflow-visible" aria-hidden>
         {edges.map(([from, to], i) => {
           const a = nodes.findIndex((n) => n.id === from);
           const b = nodes.findIndex((n) => n.id === to);
           if (a < 0 || b < 0) return null;
           const x1 = ((a + 0.5) / nodes.length) * 100;
           const x2 = ((b + 0.5) / nodes.length) * 100;
+          const isHighlighted = hover === from || hover === to;
           return (
-            <line
-              key={`${from}-${to}-${i}`}
-              x1={`${x1}%`}
-              y1="10%"
-              x2={`${x2}%`}
-              y2="90%"
-              stroke="currentColor"
-              strokeOpacity={active ? 0.35 : 0.08}
-              className="arch-line"
-            />
+            <g key={`${from}-${to}-${i}`}>
+              <line
+                x1={`${x1}%`}
+                y1="10%"
+                x2={`${x2}%`}
+                y2="90%"
+                stroke={isHighlighted ? "var(--accent)" : "currentColor"}
+                strokeWidth={isHighlighted ? "2" : "1"}
+                strokeOpacity={isHighlighted ? 0.9 : active ? 0.35 : 0.08}
+                strokeDasharray={isHighlighted ? "6,4" : undefined}
+                className={cn("transition-all duration-300", isHighlighted && "animate-pulse")}
+              />
+              {isHighlighted && (
+                <circle
+                  r="3"
+                  fill="var(--accent)"
+                  className="animate-ping"
+                  style={{
+                    cx: `${(x1 + x2) / 2}%`,
+                    cy: "50%",
+                  }}
+                />
+              )}
+            </g>
           );
         })}
       </svg>

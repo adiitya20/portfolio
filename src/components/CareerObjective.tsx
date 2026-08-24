@@ -37,11 +37,21 @@ export function CareerObjective() {
   }, []);
 
   return (
-    <section id="objective" ref={root} className="site-pad border-y border-[var(--line)] py-[16vh]">
+    <section id="objective" ref={root} className="site-pad border-y border-[var(--line)] py-[16vh] relative overflow-hidden">
+      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 display text-[18vw] font-bold text-[var(--ink)]/5 select-none leading-none">
+        GOAL
+      </span>
       <p className="section-kicker">What I aim to build</p>
-      <p className="objective-copy display mt-8 max-w-5xl text-[clamp(1.6rem,3.4vw,3.1rem)] leading-[1.15] tracking-[-0.035em]">
-        {portfolioData.objective}
-      </p>
+      <div className="relative z-10">
+        <p className="objective-copy display mt-8 max-w-5xl text-[clamp(1.6rem,3.4vw,3.1rem)] leading-[1.15] tracking-[-0.035em] font-medium text-[var(--ink)]">
+          {portfolioData.objective}
+        </p>
+        <div className="mt-8 flex flex-wrap gap-2 mono text-[10px] uppercase tracking-wider text-[var(--accent)]">
+          <span className="border border-[var(--accent)]/30 px-3 py-1 bg-[var(--accent-soft)]/20 rounded">✦ Full-Stack Web Development</span>
+          <span className="border border-[var(--accent)]/30 px-3 py-1 bg-[var(--accent-soft)]/20 rounded">✦ Machine Learning & Computer Vision</span>
+          <span className="border border-[var(--accent)]/30 px-3 py-1 bg-[var(--accent-soft)]/20 rounded">✦ Data-Driven Systems</span>
+        </div>
+      </div>
     </section>
   );
 }

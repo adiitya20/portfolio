@@ -28,15 +28,34 @@ export function SkillInteraction({ active }: Props) {
         const target = parent.querySelector<HTMLElement>(`[data-skill="${CSS.escape(name)}"]`);
         if (!target) return;
         const to = target.getBoundingClientRect();
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", String(from.left + from.width / 2 - rootBox.left));
-        line.setAttribute("y1", String(from.top + from.height / 2 - rootBox.top));
-        line.setAttribute("x2", String(to.left + to.width / 2 - rootBox.left));
-        line.setAttribute("y2", String(to.top + to.height / 2 - rootBox.top));
-        line.setAttribute("stroke", "#b44a28");
-        line.setAttribute("stroke-width", "1");
-        line.setAttribute("stroke-opacity", "0.45");
-        node.appendChild(line);
+
+        const x1 = from.left + from.width / 2 - rootBox.left;
+        const y1 = from.top + from.height / 2 - rootBox.top;
+        const x2 = to.left + to.width / 2 - rootBox.left;
+        const y2 = to.top + to.height / 2 - rootBox.top;
+
+        const cx = (x1 + x2) / 2;
+        const cy = (y1 + y2) / 2 - 30; // Curve arc control point
+
+        const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+        path.setAttribute("stroke", "#b44a28");
+        path.setAttribute("stroke-width", "1.5");
+        path.setAttribute("stroke-opacity", "0.65");
+        path.setAttribute("stroke-dasharray", "5,4");
+        path.setAttribute("fill", "none");
+        group.appendChild(path);
+
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("r", "3");
+        circle.setAttribute("fill", "#b44a28");
+        circle.setAttribute("cx", String(cx));
+        circle.setAttribute("cy", String(cy));
+        group.appendChild(circle);
+
+        node.appendChild(group);
       });
     };
 
