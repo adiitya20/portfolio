@@ -94,13 +94,13 @@ export function About() {
         </div>
         <div className="relative">
           <div
-            className="about-frame group relative aspect-[4/5] overflow-hidden border border-[var(--line)] bg-[var(--paper-2)] p-6 shadow-xl transition-transform duration-300 ease-out hover:shadow-2xl"
+            className="about-frame group relative aspect-[4/5] overflow-hidden border border-[var(--line)] bg-[var(--paper-2)] p-4 shadow-2xl transition-transform duration-300 ease-out hover:shadow-2xl rounded-xl"
             onMouseMove={(e) => {
               const card = e.currentTarget;
               const rect = card.getBoundingClientRect();
               const x = e.clientX - rect.left - rect.width / 2;
               const y = e.clientY - rect.top - rect.height / 2;
-              card.style.transform = `perspective(1000px) rotateY(${x / 25}deg) rotateX(${-y / 25}deg) scale3d(1.02, 1.02, 1.02)`;
+              card.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg) scale3d(1.02, 1.02, 1.02)`;
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)";
@@ -108,61 +108,57 @@ export function About() {
           >
             {/* Background texture & ambient grid */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,#e8dacb,transparent_60%),radial-gradient(ellipse_at_bottom_left,#dfcfbb,transparent_60%),#f3efe6]" />
-            <svg
-              className="absolute inset-0 h-full w-full opacity-20 transition-opacity duration-500 group-hover:opacity-35"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <pattern id="about-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-                  <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#about-grid)" />
-            </svg>
-            <div className="absolute inset-[8%] border border-[var(--ink)]/15" />
-
-            <div className="relative z-10 flex h-full flex-col justify-between">
+            
+            {/* Main Portrait Container */}
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-lg border border-[var(--line)] bg-black/5 flex flex-col justify-between p-4">
+              
               {/* Top Bar: Status */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 rounded-full border border-[var(--ink)]/20 bg-[var(--paper)]/80 px-3 py-1 text-[10px] uppercase tracking-wider backdrop-blur-xs mono">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Available for Roles</span>
+              <div className="flex items-center justify-between z-20">
+                <div className="flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-wider backdrop-blur-md text-white mono">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Aditya Verlekar</span>
                 </div>
-                <span className="mono text-[10px] tracking-widest text-[var(--ink-soft)] uppercase">
-                  IND / {personal.location.split(",")[0]}
+                <span className="mono text-[10px] tracking-widest text-white/80 uppercase bg-black/40 backdrop-blur-md px-2.5 py-1 rounded border border-white/20">
+                  GOA, IND
                 </span>
               </div>
 
-              {/* Center: Stylized Developer Monogram */}
-              <div className="my-auto text-center py-6">
-                <div className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-[var(--ink)]/20 bg-[var(--paper)]/60 shadow-inner backdrop-blur-xs">
-                  <span className="display text-4xl font-light tracking-tighter text-[var(--ink)]">
-                    {personal.firstName[0]}
-                    {personal.lastName[0]}
-                  </span>
-                </div>
-                <p className="display mt-4 text-2xl tracking-tight text-[var(--ink)]">
-                  {personal.name}
-                </p>
-                <p className="mono mt-1 text-[11px] tracking-widest uppercase text-[var(--accent)] font-medium">
-                  {personal.role}
-                </p>
+              {/* Developer Photo with Hover Effects */}
+              <div className="absolute inset-0 z-0">
+                {/* Image */}
+                <img
+                  src="/aditya.jpg"
+                  alt="Aditya Verlekar"
+                  className="h-full w-full object-cover object-center grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                />
+
+                {/* Laser scanline on hover */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-bounce shadow-[0_0_15px_#f59e0b]" />
+
+                {/* Cyberpunk HUD Frame corner markers */}
+                <div className="absolute top-3 left-3 h-4 w-4 border-t-2 border-l-2 border-amber-400/80 pointer-events-none" />
+                <div className="absolute top-3 right-3 h-4 w-4 border-t-2 border-r-2 border-amber-400/80 pointer-events-none" />
+                <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-amber-400/80 pointer-events-none" />
+                <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-amber-400/80 pointer-events-none" />
+
+                {/* Dark gradient overlay for bottom text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none" />
               </div>
 
-              {/* Bottom: Stat highlights */}
-              <div className="grid grid-cols-2 gap-3 border-t border-[var(--line)] pt-4">
+              {/* Bottom: Stat highlights over photo */}
+              <div className="relative z-10 grid grid-cols-2 gap-3 border-t border-white/20 pt-3 text-white backdrop-blur-md bg-black/40 px-3 py-2 rounded-md">
                 <div>
-                  <p className="mono text-[9px] uppercase tracking-widest text-[var(--ink-soft)]">
-                    Degree Score
+                  <p className="mono text-[9px] uppercase tracking-widest opacity-75">
+                    Role & Focus
                   </p>
-                  <p className="display text-lg font-bold text-[var(--ink)]">{personal.cgpa}</p>
+                  <p className="display text-xs font-bold text-amber-400">Software & AI Engineer</p>
                 </div>
                 <div>
-                  <p className="mono text-[9px] uppercase tracking-widest text-[var(--ink-soft)]">
-                    Institution
+                  <p className="mono text-[9px] uppercase tracking-widest opacity-75">
+                    Degree & CGPA
                   </p>
-                  <p className="display text-xs font-semibold text-[var(--ink)] leading-tight">
-                    {personal.collegeShort} · IT
+                  <p className="display text-xs font-semibold leading-tight">
+                    B.E. IT · {personal.cgpa}
                   </p>
                 </div>
               </div>

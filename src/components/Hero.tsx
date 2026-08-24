@@ -123,10 +123,20 @@ export function Hero() {
       <div className="hero-visual pointer-events-none absolute inset-0">
         <HeroBackground />
       </div>
-      <div className="site-pad relative z-10 flex items-start justify-between gap-6">
-        <p className="hero-meta hero-hide mono text-[11px] tracking-[0.2em] uppercase text-[var(--ink-soft)]">
-          {personal.location}
-        </p>
+      <div className="site-pad relative z-10 flex items-center justify-between gap-6">
+        <div className="flex items-center gap-3">
+          {/* Interactive Floating Avatar Badge */}
+          <div className="hero-meta hero-hide group relative flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--paper-2)]/80 p-1 pr-4 shadow-sm backdrop-blur-xs transition-all hover:scale-105 hover:border-[var(--accent)] cursor-pointer" onClick={() => scrollToId("about")}>
+            <div className="relative h-9 w-9 overflow-hidden rounded-full border border-[var(--ink)]/20">
+              <img src="/aditya.jpg" alt="Aditya Verlekar" className="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-300" />
+              <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse" />
+            </div>
+            <span className="mono text-[10px] uppercase tracking-wider font-semibold text-[var(--ink)]">
+              {personal.location.split(",")[0]}
+            </span>
+          </div>
+        </div>
+        
         <p className="hero-meta hero-hide mono text-[11px] tracking-[0.2em] uppercase text-[var(--ink-soft)]">
           {personal.collegeShort}
         </p>
