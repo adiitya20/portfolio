@@ -410,9 +410,9 @@ export const portfolioData = {
   ],
 
   resume: {
-    url: "/resume.pdf",
-    pdfUrl: "/resume.pdf",
-    note: "Place your résumé PDF at public/resume.pdf or set pdfUrl to your Cloudinary link.",
+    url: "https://collection.cloudinary.com/cvjk7byd/e71f8b07e70cf37a6c9609c0e268d11f",
+    pdfUrl: "https://collection.cloudinary.com/cvjk7byd/e71f8b07e70cf37a6c9609c0e268d11f",
+    note: "Official résumé document uploaded on Cloudinary.",
   },
 
   contact: {
