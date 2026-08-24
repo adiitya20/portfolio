@@ -42,17 +42,12 @@ export function Skills() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start: "top top",
-          end: "+=140%",
-          pin: true,
-          scrub: 1,
+          start: "top 20%",
+          end: "+=60%",
+          scrub: 0.5,
         },
       });
-      tl.to(".skills-grid", { y: -30, opacity: 0.12, duration: 0.4 }).to(
-        clusters,
-        { autoAlpha: 1, y: 0, duration: 0.4 },
-        "<+=0.1",
-      );
+      tl.to(clusters, { autoAlpha: 1, y: 0, duration: 0.4 });
     }, el);
     return () => ctx.revert();
   }, [desktop]);

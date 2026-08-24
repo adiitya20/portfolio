@@ -28,7 +28,7 @@ export function SkillCategory({ label, skills, active, related, onEnter, onLeave
                 className={cn(
                   "skill-item display relative inline-flex items-center px-3.5 py-1.5 border border-transparent text-[clamp(1rem,1.8vw,1.4rem)] tracking-[-0.03em] transition-all duration-300 rounded-md",
                   isActive && "border-[var(--ink)] bg-[var(--ink)] text-[var(--paper)] shadow-md -translate-y-1 scale-105",
-                  dim && "opacity-25",
+                  dim && "opacity-60",
                   isRelated && !isActive && "border-[var(--accent)] bg-[var(--accent-soft)]/40 text-[var(--accent)] font-medium -translate-y-0.5",
                   !isActive && !isRelated && !dim && "hover:border-[var(--line-strong)] hover:bg-[var(--paper-2)] hover:-translate-y-0.5"
                 )}
