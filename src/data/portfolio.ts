@@ -418,11 +418,11 @@ export const portfolioData = {
   contact: {
     heading: "Let's connect",
     text: "Have an opportunity, project or idea? I'd love to hear from you.",
-    linkedin: "https://www.linkedin.com/in/aditya-verlekar-81990b287/",
+    linkedin: "https://linkedin.com/in/aditya-verlekar",
     github: "https://github.com/adiitya20",
     instagram: "https://www.instagram.com/adityaverlekar_/",
-    phone: "",
-    email: "",
+    phone: "+91 7558696546",
+    email: "adityaverlekarr@gmail.com",
   },
 
   nav: [
