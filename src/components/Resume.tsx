@@ -5,77 +5,35 @@ import { portfolioData } from "@/data/portfolio";
 import { MagneticButton } from "./MagneticButton";
 
 export function Resume() {
-  const [open, setOpen] = useState(false);
-  const { personal, resume, education, leadership, skills } = portfolioData;
+  const { personal, resume } = portfolioData;
 
-  const printResume = () => {
-    window.print();
-  };
+  const pdfUrl = resume.pdfUrl || resume.url;
 
   return (
-    <section id="resume" className="site-pad py-[14vh]">
-      <p className="section-kicker">Resume</p>
-      <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
-        <h2 className="display text-[clamp(2.4rem,6vw,5rem)] tracking-[-0.05em]">
-          {personal.name}
-        </h2>
-        <div className="flex gap-8">
-          <MagneticButton
-            className="display text-sm tracking-[0.16em] uppercase"
-            onClick={() => setOpen(true)}
-          >
-            View resume
-          </MagneticButton>
-          <MagneticButton
-            className="display text-sm tracking-[0.16em] uppercase"
-            href={resume.url}
-          >
-            Download resume
-          </MagneticButton>
+    <section id="resume" className="site-pad py-[14vh] relative">
+      <p className="section-kicker">Résumé Document</p>
+      <div className="mt-6 border border-[var(--line)] bg-[var(--paper-2)]/60 p-8 rounded-xl shadow-lg flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <span className="mono text-[10px] uppercase tracking-wider bg-[var(--accent-soft)] text-[var(--accent)] px-2.5 py-1 rounded font-bold">
+            Curriculum Vitae
+          </span>
+          <h2 className="display mt-3 text-[clamp(2rem,4vw,3.5rem)] tracking-[-0.05em] font-semibold text-[var(--ink)]">
+            {personal.name}&apos;s Résumé
+          </h2>
+          <p className="mt-2 text-[var(--ink-soft)] text-sm max-w-md">
+            Inspect, view in browser, or download official PDF résumé document.
+          </p>
         </div>
-      </div>
-      <p className="mt-4 max-w-lg text-sm text-[var(--ink-soft)]">{resume.note}</p>
 
-      <div
-        className="mt-10 overflow-hidden border border-[var(--line)] bg-[var(--white)] transition-[max-height] duration-700"
-        style={{ maxHeight: open ? 1200 : 180 }}
-      >
-        <div id="resume-preview" className="p-8 md:p-12">
-          <div className="flex justify-between gap-6">
-            <div>
-              <p className="display text-4xl tracking-[-0.05em]">{personal.name}</p>
-              <p className="mt-2 text-sm text-[var(--ink-soft)]">
-                {personal.role} · {personal.degree}
-              </p>
-            </div>
-            <button
-              type="button"
-              className="mono text-[10px] tracking-[0.16em] uppercase"
-              onClick={printResume}
-            >
-              Print
-            </button>
-          </div>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <div>
-              <p className="mono text-[10px] tracking-[0.16em] uppercase">Education</p>
-              {education.map((item) => (
-                <p key={item.id} className="mt-3 text-sm">
-                  {item.institution}
-                  {item.degree ? ` — ${item.degree}` : ""} · {item.score}
-                </p>
-              ))}
-            </div>
-            <div>
-              <p className="mono text-[10px] tracking-[0.16em] uppercase">Leadership</p>
-              <p className="mt-3 text-sm">
-                {leadership[0].event} — {leadership[0].role}
-              </p>
-              <p className="mono mt-8 text-[10px] tracking-[0.16em] uppercase">Skills</p>
-              <p className="mt-3 text-sm">{skills.programming.join(" · ")}</p>
-              <p className="mt-2 text-sm">{skills.web.join(" · ")}</p>
-            </div>
-          </div>
+        <div className="flex flex-wrap gap-4">
+          <a
+            href={pdfUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="display text-sm tracking-[0.16em] uppercase px-6 py-3.5 border border-[var(--ink)] bg-[var(--ink)] text-[var(--paper)] hover:bg-[var(--accent)] hover:border-[var(--accent)] transition-all shadow-md rounded-md inline-flex items-center gap-2"
+          >
+            📄 Open / Download PDF ↗
+          </a>
         </div>
       </div>
     </section>

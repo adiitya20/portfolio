@@ -411,7 +411,8 @@ export const portfolioData = {
 
   resume: {
     url: "/resume.pdf",
-    note: "Place your résumé PDF at public/resume.pdf to enable download.",
+    pdfUrl: "/resume.pdf",
+    note: "Place your résumé PDF at public/resume.pdf or set pdfUrl to your Cloudinary link.",
   },
 
   contact: {
